@@ -1,0 +1,142 @@
+* {
+  font-family: "Arial MT";
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+
+.row {
+  padding: 50px; }
+
+.header {
+  background-color: #445162; }
+  .header-text {
+    text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.3);
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 400; }
+  .header h1 {
+    font-size: 60px; }
+  .header-img {
+    width: 469px;
+    height: 214px;
+    background-color: #ffffff;
+    float: right;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    overflow: hidden; }
+  .header-list {
+    list-style-image: url("../img/check_icon.png"); }
+
+.about {
+  color: #445162;
+  font-size: 30px;
+  font-weight: 400; }
+  .about p {
+    font-size: 16px; }
+  .about-img {
+    width: 430px;
+    height: 245px;
+    background-color: #445162;
+    float: right; }
+
+.pluses {
+  background-color: #f5f5f5; }
+  .pluses h3 {
+    text-align: center;
+    width: 100%;
+    margin-bottom: 29px; }
+  .pluses-block {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+    .pluses-block img {
+      padding-top: 5px;
+      padding-right: 9px;
+      height: 100%; }
+    .pluses-block p {
+      width: 90%;
+      color: #333333; }
+      .pluses-block p:after {
+        content: "";
+        clear: both; }
+
+.screen {
+  padding-top: 51px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+  .screen h3 {
+    text-align: center;
+    width: 100%;
+    margin-bottom: 35px;
+    color: #445162;
+    font-size: 30px; }
+  .screen-block {
+    margin: 30px 0;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+    .screen-block-img {
+      min-width: 200px;
+      height: 150px;
+      background-color: #445161; }
+    .screen-block-text {
+      margin-left: 15px;
+      margin-right: 15px; }
+      .screen-block-text h4 {
+        color: #445161;
+        font-size: 24px; }
+      .screen-block-text p {
+        color: #333333;
+        font-size: 16px;
+        font-weight: 400; }
+
+.reviews {
+  background-color: #f5f5f5; }
+  .reviews h3 {
+    text-align: center;
+    color: #445162;
+    width: 100%;
+    margin-bottom: 29px; }
+  .reviews-block {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+  .reviews-img {
+    width: 75px;
+    height: 75px;
+    background-color: #445161;
+    border-radius: 100%;
+    min-width: 75px;
+    margin-right: 23px; }
+  .reviews-text {
+    padding: 16px 20px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    background-color: #ebebeb;
+    border-radius: 7px;
+    position: relative;
+    z-index: 99;
+    margin-bottom: 24px; }
+    .reviews-text:before {
+      content: " ";
+      background: url(../img/bg_quote.png) no-repeat;
+      position: absolute;
+      left: -8px;
+      top: 10px;
+      height: 50px;
+      width: 100%;
+      background-size: 100%;
+      z-index: -1; }
+    .reviews-text blockquote {
+      color: #333333;
+      font-family: "Arial - Italic MT";
+      font-size: 14px;
+      font-weight: 400;
+      font-style: italic; }
+    .reviews-text cite {
+      color: #989898;
+      font-family: "Arial MT";
+      font-size: 14px;
+      font-weight: 400;
+      font-style: normal; }
