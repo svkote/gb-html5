@@ -51,10 +51,12 @@
     display: -ms-flexbox;
     display: flex; }
     .pluses-block img {
+      float: left;
       padding-top: 5px;
       padding-right: 9px;
       height: 100%; }
     .pluses-block p {
+      overflow: hidden;
       width: 90%;
       color: #333333; }
       .pluses-block p:after {
@@ -157,7 +159,8 @@
       font-family: "Arial MT";
       font-size: 14px;
       font-weight: 400;
-      font-style: normal; }
+      font-style: normal;
+      display: block; }
 
 .buy h3 {
   text-align: center;
@@ -168,8 +171,8 @@
   background-color: #445162;
   border-radius: 5px;
   border: 1px solid #445162;
-  -webkit-filter: blur(2px) grayscale(100%);
-          filter: blur(2px) grayscale(100%);
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
   -webkit-transition: 0.3s ease-out;
   transition: 0.3s ease-out;
   -webkit-box-shadow: none;

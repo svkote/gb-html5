@@ -50,11 +50,12 @@ $color: #445162
     &-block
         display: flex
         img
-            
+            float: left
             padding-top: 5px
             padding-right: 9px
             height: 100%
         p
+            overflow: hidden
             width: 90%
             color: #333333
             &:after
@@ -144,6 +145,7 @@ $color: #445162
             font-size: 14px
             font-weight: 400
             font-style: normal
+            display: block
 
 .buy
     h3
@@ -155,7 +157,7 @@ $color: #445162
         background-color: $color
         border-radius: 5px
         border: 1px solid $color
-        filter: blur(2px) grayscale(100%)
+        filter: grayscale(100%)
         transition: .3s ease-out
         box-shadow: none
         z-index: 8
