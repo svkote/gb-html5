@@ -15,6 +15,25 @@
   </head>
   <body>
     <header class="header">
+        <div class="fullscreen-bg">
+            <div class="overlay">
+                <div class="container">
+                    <div class="row header-text justify-content-end">
+                      <h1 class="col-12 col-lg-6">We Design and Develop</h1>
+                      <div class="w-100"></div>
+                      <p class="col-12 col-lg-6">We are a new design studio based in USA. We have over 
+                          20 years of combined experience, and know a thing or two 
+                          about designing websites and mobile apps.</p>
+                      <div class="w-100"></div>
+                      <button class="button">contact us</button>
+                    </div>
+                  </div>
+            </div>
+            <video loop muted autoplay class="fullscreen-bg__video">
+              <source src="assets/video3.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+            </video>
+        </div>
+
         <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light container-fluid">
           <a class="navbar-brand" href="#"><img src="assets/img/logo.png" alt=""></a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
@@ -47,7 +66,7 @@
           </div>
         </nav>
 
-      <div class="container">
+      <!-- <div class="container">
         <div class="row header-text justify-content-end">
           <h1 class="col-12 col-lg-6">We Design and Develop</h1>
           <div class="w-100"></div>
@@ -56,7 +75,7 @@
               about designing websites and mobile apps.</p>
           <div class="w-100"></div>
           <button class="button">contact us</button>
-        </div>
+        </div> -->
       </div>
     </header>
     <main>
@@ -336,7 +355,12 @@
             <p>Was years it seasons was there form he in in them together over that, 
                 third sixth gathered female creeping bearing behold years.</p>
               <div class="w-100"></div>
-            <iframe width="1070" height="571" src="https://www.youtube.com/embed/vF4BMVm89QI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              <div class="embed-responsive embed-responsive-16by9">
+                <video controls="controls" poster="assets/img/photo_work/photo8.jpg">
+                  <source src="assets/video3.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+                  Тег video не поддерживается вашим браузером. 
+                  </video>
+              </div>
           </div>
           <!-- /.row justify-content-center -->
           
@@ -418,10 +442,11 @@
             <div class="reviews-block"  id="switch1">
                 <blockquote>
                     “ Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum laudantium impedit distinctio saepe nihil cupiditate vero amet omnis pariatur. Consequatur optio at nulla temporibus a tenetur. ”
+                  <cite>
+                      Michael Hopkins
+                  </cite>
                 </blockquote>
-                <cite>
-                    Michael Hopkins
-                </cite>
+                
   
               </div>
               <!-- /.reviews-block -->
@@ -429,10 +454,11 @@
           <div class="reviews-block"  id="switch2">
               <blockquote>
                   “ Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum laudantium impedit distinctio saepe nihil cupiditate vero amet omnis pariatur. Consequatur optio at nulla temporibus a tenetur. Facere quidem consequatur iure. ”
+              
+                <cite>
+                    Michael Hopkins
+                </cite>
               </blockquote>
-              <cite>
-                  Michael Hopkins
-              </cite>
 
             </div>
             <!-- /.reviews-block -->
@@ -442,10 +468,10 @@
                   “ Outstanding job and exceeded all expectations. It was a pleasure 
                   to work with them on a sizable first project and am looking 
                   forward to start the next one asap.”
+                  <cite>
+                      Michael Hopkins
+                  </cite>
               </blockquote>
-              <cite>
-                  Michael Hopkins
-              </cite>
 
             </div>
             <!-- /.reviews-block -->
@@ -484,6 +510,7 @@
             <p>Let us know what you're looking for in an agency. We'll take a look and see 
                 if this could be the start of something beautiful.</p>
             <div class="w-100"></div>
+
 
             <form action="#">
               <input type="text" placeholder="Your Name" id="name">
