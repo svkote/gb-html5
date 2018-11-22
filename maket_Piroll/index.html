@@ -513,10 +513,10 @@
 
 
             <form action="#">
-              <input type="text" placeholder="Your Name" id="name">
-              <input type="email" placeholder="Your Email" id="mail">
-              <input type="text" placeholder="Your Title" id="title">
-              <textarea cols="30" rows="5" placeholder="Your Comment" id="comment"></textarea>
+              <input type="text" placeholder="Your Name" id="name" pattern=".{6,}">
+              <input type="email" placeholder="Your Email" id="mail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+              <input type="text" placeholder="Your Title" id="title" pattern=".{3,}">
+              <textarea cols="30" rows="5" placeholder="Your Comment" id="comment" pattern=".{6,}"></textarea>
               <input type="submit" value="send message" id="submit">
             </form>
           </div>

@@ -470,7 +470,8 @@
       font-weight: 500;
       text-transform: uppercase;
       letter-spacing: 1.2px;
-      padding: 20px; }
+      padding: 20px;
+      outline: none; }
     .form form #comment {
       height: 62px; }
       .form form #comment:focus {
