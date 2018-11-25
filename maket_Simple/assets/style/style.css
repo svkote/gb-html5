@@ -246,7 +246,8 @@
     margin-bottom: 21px;
     border-radius: 5px;
     padding: 10px;
-    outline: none; }
+    outline: none;
+    border: none; }
     .contacts form input:focus, .contacts form textarea:focus {
       background-color: #88a2c4;
       -webkit-transform: scale(1.02);
