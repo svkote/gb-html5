@@ -21,50 +21,84 @@
     -webkit-transition: 0.5s ease-out;
     transition: 0.5s ease-out; }
 
-.header {
-  background-color: #e9e9e9; }
-  .header .navbar {
+.fullscreen-bg {
+  overflow: hidden;
+  z-index: -100;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  padding-top: 45%;
+  min-height: 600px; }
+
+.fullscreen-bg__video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%; }
+
+.overlay {
+  background: rgba(233, 233, 233, 0.64);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 4; }
+
+@media (max-width: 1080px) {
+  .fullscreen-bg {
+    background-color: #e9e9e9; }
+
+  .fullscreen-bg__video {
+    display: none; }
+
+  .overlay {
+    background-color: #e9e9e9; }
+
+  .header .header-text h1 {
+    color: #171717; } }
+.header .navbar {
+  background-color: #e9e9e9 !important;
+  -webkit-box-shadow: 0px 6px 10px #e9e9e9;
+          box-shadow: 0px 6px 10px #e9e9e9; }
+  .header .navbar .nav-item a {
     background-color: #e9e9e9 !important;
-    -webkit-box-shadow: 0px 6px 10px #e9e9e9;
-            box-shadow: 0px 6px 10px #e9e9e9; }
-    .header .navbar .nav-item a {
-      background-color: #e9e9e9 !important;
-      color: #191919;
-      font-size: 12px;
-      font-weight: 500;
-      line-height: 24px;
-      text-transform: uppercase;
-      letter-spacing: 1.2px;
+    color: #191919;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 24px;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    -webkit-transition: 0.5s ease-out;
+    transition: 0.5s ease-out;
+    padding-left: 20px; }
+    .header .navbar .nav-item a:hover {
+      color: #10c9c3;
+      font-weight: 900;
       -webkit-transition: 0.5s ease-out;
-      transition: 0.5s ease-out;
-      padding-left: 20px; }
-      .header .navbar .nav-item a:hover {
-        color: #10c9c3;
-        font-weight: 900;
-        -webkit-transition: 0.5s ease-out;
-        transition: 0.5s ease-out; }
-    .header .navbar .active > .nav-link {
-      color: #10c9c3; }
-  .header-text {
-    padding-top: 234px;
-    padding-bottom: 200px;
-    text-align: right; }
-    .header-text h1 {
-      color: #1d1d1d;
-      font-size: 38px;
-      font-weight: 500;
-      line-height: 48px;
-      letter-spacing: 0.38px;
-      margin-bottom: 30px; }
-    .header-text p {
-      max-width: 487px;
-      color: #787878;
-      font-family: "Nunito Sans";
-      font-size: 18px;
-      font-weight: 400;
-      line-height: 28px;
-      letter-spacing: 0.09px;
-      margin-bottom: 30px; }
+      transition: 0.5s ease-out; }
+  .header .navbar .active > .nav-link {
+    color: #10c9c3; }
+.header-text {
+  padding-top: 234px;
+  padding-bottom: 200px;
+  text-align: right; }
+  .header-text h1 {
+    color: #fff;
+    font-size: 38px;
+    font-weight: 500;
+    line-height: 48px;
+    letter-spacing: 0.38px;
+    margin-bottom: 30px; }
+  .header-text p {
+    max-width: 487px;
+    color: #787878;
+    font-family: "Nunito Sans";
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 28px;
+    letter-spacing: 0.09px;
+    margin-bottom: 30px; }
 
 .about {
   padding-top: 100px;
@@ -407,10 +441,12 @@
       font-size: 15px;
       font-weight: 400;
       letter-spacing: 0.07px;
-      background-color: #ffffff;
+      background-color: #e9e9e9;
       outline: none;
       border: none;
-      border-radius: 5px; }
+      border-bottom: 1px solid; }
+      .form form #comment:focus, .form form #name:focus, .form form #title:focus, .form form #mail:focus, .form form textarea:focus {
+        border-bottom: 1px solid #00c9c3; }
     .form form #name, .form form #mail {
       -webkit-box-flex: 0;
           -ms-flex: 0 0 47%;
@@ -434,7 +470,12 @@
       font-weight: 500;
       text-transform: uppercase;
       letter-spacing: 1.2px;
-      padding: 20px; }
+      padding: 20px;
+      outline: none; }
+    .form form #comment {
+      height: 62px; }
+      .form form #comment:focus {
+        height: 162px; }
 
 .footer {
   padding-top: 50px;
@@ -455,3 +496,15 @@
     letter-spacing: 0.07px; }
   .footer li {
     list-style: none; }
+
+.bgvideo {
+  height: 100vh;
+  max-height: 680px;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center center;
+     object-position: center center;
+  position: absolute;
+  top: 0;
+  right: 0; }
