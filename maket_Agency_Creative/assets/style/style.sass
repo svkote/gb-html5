@@ -2,6 +2,9 @@
 @font-face
     font-family: 'Peace sans'
     src: url('../fonts/PeaceSans.woff') format('woff')
+@font-face
+    font-family: 'LemonMilkBold'
+    src: url('../fonts/LemonMilkbold.otf') format('otf')
 
 // Библиотеки
 @import "../libs/normalize-css/normalize.css"  
@@ -55,13 +58,57 @@ h2
     margin-bottom: 76px
     margin-top: 0
     line-height: .87
+
+
 .main-header
     min-height: 100vh
-    background: url(../img/Place_Image.png) no-repeat $accent-red 
-    background-blend-mode: multiply
+    background: url(../img/Place_Image.png) no-repeat
+    // background-blend-mode: multiply
     background-attachment: fixed
     background-position: center
     background-size: cover
+    position: relative
+    z-index: 2
+    padding-bottom: 100px
+    .btn
+        margin-top: 630px
+        margin-left: 35%
+        margin-right: 65%
+.main-header-wrapper
+    content: ""
+    width: 100%
+    height: 100%
+    position: absolute
+    background: $accent-red
+    // opacity: .8
+    mix-blend-mode: multiply
+    top: 0
+    left: 0
+    right: 0
+    z-index: -1
+    // filter: contrast(177%) grayscale(36%) brightness(110%)
+    h1
+        font-family: 'LemonMilkBold', 'Russo One', sans-serif
+        text-align: center
+        font-size: 159px
+        font-weight: 900
+        text-transform: uppercase
+        // mix-blend-mode: color
+        color: #ffffff
+        padding: 0
+        margin: 0
+        letter-spacing: 0.51px
+        line-height: 0.76
+        text-shadow: 3px -3px 6px #000000, -6px 3px 6px #000000
+        margin-bottom: 64px
+        margin-top: 170px
+        filter: drop-shadow(0 0 10px black)
+        width: 70%
+        margin-top: 270px
+        span
+            font-size: 96px
+            position: relative
+            top: -43px
 .main-header_nav
     display: flex
     justify-content: space-between
@@ -79,6 +126,9 @@ h2
         font-family: Lato
         font-size: 15px
         font-weight: 700
+        &:hover
+            text-decoration: underline
+            opacity: .7
     .logo a
         color: #ffffff
         font-family: Lato
@@ -93,26 +143,25 @@ h2
         font-size: 159px
         font-weight: 900
         text-transform: uppercase
-        mix-blend-mode: hard-light
-        color: rgba(199, 199, 199, 0.71)
+        // mix-blend-mode: color
+        color: #ffffff
         padding: 0
         margin: 0
         letter-spacing: 0.51px
         line-height: 0.76
-        text-shadow: -4px 4px 4px #000000, 1px -1px 20px #000000
+        text-shadow: 3px -3px 6px #000000, -6px 3px 6px #000000
         margin-bottom: 64px
         margin-top: 170px
+        filter: drop-shadow(0 0 10px black)
         span
             font-size: 96px
             position: relative
             top: -43px
-    .btn
-        margin-bottom: 186px
 .header-model
         position: absolute
-        top: -3%
-        left: 46%
-        width: 1030px
+        bottom: -17%
+        left: 47%
+        width: 930px
         overflow: hidden
 .btn
     width: 192px
@@ -131,10 +180,17 @@ h2
     margin-right: auto
     &:focus
         outline: none
+    &:hover
+        background-color: #dfdfdf
+        cursor: pointer
+
 .btn-red
     background-color: $accent-red
     color: #ffffff
     box-shadow: -4px 12px 40px rgba(0, 1, 1, 0.2)
+    &:hover
+        background-color: #852227
+        cursor: pointer
 
 .who
     position: relative
@@ -194,13 +250,124 @@ h2
         overflow: hidden
         h4
             color: #6f6f6e
-            font-family: "Peace Sans"
+            font-family: 'Open Sans', sans-serif
             font-size: 30px
-            font-weight: 400
+            font-weight: 800
             line-height: 1
             margin-top: 30px
             margin-bottom: 25px
-
+.we-works
+    position: relative
+    overflow: hidden
+    background-color: #fff
+    z-index: -2
+    h2
+        margin-bottom: 70px
+    &-text
+        display: inline-block
+        max-width: 300px
+        p
+            margin-bottom: 46px
+        .btn
+            margin-left: 0
+    &-img
+        position: relative
+        left: 40%
+        bottom: 25%
+        display: grid
+        grid-template-columns: 1fr 1fr 1fr
+        &-one, &-two, &-three
+            position: absolute
+            display: grid
+            grid-gap: 0
+            width: 350px
+            height: 297px
+            grid-template-columns: 1fr 
+            align-items: end
+            padding-left: 87px
+            background-position: center
+            background-size: cover
+            bottom: 49%
+            transform: skewX(-25deg)
+            background-color: #000000
+            transition: all 1s ease
+            &:hover
+                background-blend-mode: hard-light
+                transition: all 1s ease
+                transform: translateX(-25%) skewX(-25deg)
+                p
+                    display: block
+                    transition: all 1s ease
+                    transform: skewX(25deg)
+            b
+                color: #ffffff
+                font-family: Lato
+                font-size: 40px
+                font-weight: 700
+                text-transform: uppercase
+                filter: drop-shadow(0 0 10px black)
+                transform: skewX(25deg)
+            p
+                max-width: 210px
+                color: #ffffff
+                font-family: "Open Sans"
+                font-size: 18px
+                filter: drop-shadow(0 0 10px black)
+                transform: skewX(25deg)
+                display: none
+                transition: all 1s ease
+        &-one
+            background-image: url(../img/lapiz.jpg)
+            left: 0
+            &:before
+                content: "1."
+                position: absolute
+                top: -7px
+                right: 25px
+                color: #ffffff
+                font-family: Lato
+                font-size: 58px
+                font-weight: 700
+                text-transform: uppercase
+                transform: skewX(25deg)
+        &-two
+            background-image: url(../img/photo1.jpg)
+            left: 390px
+            &:before
+                content: "2."
+                position: absolute
+                top: -7px
+                right: 25px
+                color: #ffffff
+                font-family: Lato
+                font-size: 58px
+                font-weight: 700
+                text-transform: uppercase
+                transform: skewX(25deg)
+        &-three
+            background-image: url(../img/photo2.jpg)
+            left: 780px
+            &:before
+                content: "3."
+                position: absolute
+                top: -7px
+                right: 25px
+                color: #ffffff
+                font-family: Lato
+                font-size: 58px
+                font-weight: 700
+                text-transform: uppercase
+                transform: skewX(25deg)
+    &:before
+        content: ""
+        position: absolute
+        width: 1183px
+        height: 1183px
+        right: -50%
+        bottom: -55%
+        transform: rotate(45deg)
+        background-color: $accent-red
+        z-index: -1
 
 
 
