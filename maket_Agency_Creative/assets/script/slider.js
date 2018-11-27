@@ -7,3 +7,12 @@ function nextSlide(){
 	currentSlide = (currentSlide+1)%slides.length;
 	slides[currentSlide].className = 'slide showing';
 }
+
+
+(function($){
+	$(function() {
+	  $('.menu__icon').on('click', function() {
+		$(this).closest('.menu').toggleClass('menu_state_open');
+	  });
+	});
+  })(jQuery);
