@@ -2,6 +2,9 @@
 @font-face
     font-family: 'Peace sans'
     src: url('../fonts/PeaceSans.woff') format('woff')
+@font-face
+    font-family: 'LemonMilkBold'
+    src: url('../fonts/LemonMilkbold.otf') format('otf')
 
 // Библиотеки
 @import "../libs/normalize-css/normalize.css"  
@@ -33,6 +36,8 @@ body
     display: block
     max-width: 100%
     height: auto
+    margin-left: auto
+    margin-right: auto
 .text-center
     text-align: center
 
@@ -44,6 +49,8 @@ body
     max-width: 1200px
     margin: auto
     padding: 0 
+    padding-left: 20px
+    padding-right: 20px
 .landing-block
     padding-top: 97px
     padding-bottom: 100px
@@ -55,13 +62,58 @@ h2
     margin-bottom: 76px
     margin-top: 0
     line-height: .87
+
+
 .main-header
     min-height: 100vh
-    background: url(../img/Place_Image.png) no-repeat $accent-red 
-    background-blend-mode: multiply
+    background: url(../img/Place_Image.png) no-repeat
+    // background-blend-mode: multiply
     background-attachment: fixed
     background-position: center
     background-size: cover
+    position: relative
+    z-index: 2
+    padding-bottom: 100px
+    overflow: hidden
+    .btn
+        margin-top: 630px
+        margin-left: 35%
+        margin-right: 65%
+.main-header-wrapper
+    content: ""
+    width: 100%
+    height: 100%
+    position: absolute
+    background: $accent-red
+    // opacity: .8
+    mix-blend-mode: multiply
+    top: 0
+    left: 0
+    right: 0
+    z-index: -1
+    // filter: contrast(177%) grayscale(36%) brightness(110%)
+    h1
+        font-family: 'LemonMilkBold', 'Russo One', sans-serif
+        text-align: center
+        font-size: 159px
+        font-weight: 900
+        text-transform: uppercase
+        // mix-blend-mode: color
+        color: #ffffff
+        padding: 0
+        margin: 0
+        letter-spacing: 0.51px
+        line-height: 0.76
+        text-shadow: 3px -3px 6px #000000, -6px 3px 6px #000000
+        margin-bottom: 64px
+        margin-top: 170px
+        filter: drop-shadow(0 0 10px black)
+        width: 70%
+        margin-top: 270px
+        span
+            font-size: 96px
+            position: relative
+            top: -43px
 .main-header_nav
     display: flex
     justify-content: space-between
@@ -69,8 +121,11 @@ h2
     z-index: 2
     position: relative
     padding-top: 20px
+    .menu ul
+        list-style-type: none
+        display: flex
     .menu a
-        float: left
+        // float: left
         padding: 0 10px
         text-decoration: none
         list-style: none
@@ -79,6 +134,9 @@ h2
         font-family: Lato
         font-size: 15px
         font-weight: 700
+        &:hover
+            text-decoration: underline
+            opacity: .7
     .logo a
         color: #ffffff
         font-family: Lato
@@ -93,26 +151,25 @@ h2
         font-size: 159px
         font-weight: 900
         text-transform: uppercase
-        mix-blend-mode: hard-light
-        color: rgba(199, 199, 199, 0.71)
+        // mix-blend-mode: color
+        color: #ffffff
         padding: 0
         margin: 0
         letter-spacing: 0.51px
         line-height: 0.76
-        text-shadow: -4px 4px 4px #000000, 1px -1px 20px #000000
+        text-shadow: 3px -3px 6px #000000, -6px 3px 6px #000000
         margin-bottom: 64px
         margin-top: 170px
+        filter: drop-shadow(0 0 10px black)
         span
             font-size: 96px
             position: relative
             top: -43px
-    .btn
-        margin-bottom: 186px
 .header-model
         position: absolute
-        top: -3%
-        left: 46%
-        width: 1030px
+        bottom: -17%
+        left: 47%
+        width: 930px
         overflow: hidden
 .btn
     width: 192px
@@ -131,10 +188,17 @@ h2
     margin-right: auto
     &:focus
         outline: none
+    &:hover
+        background-color: #dfdfdf
+        cursor: pointer
+
 .btn-red
     background-color: $accent-red
     color: #ffffff
     box-shadow: -4px 12px 40px rgba(0, 1, 1, 0.2)
+    &:hover
+        background-color: #852227
+        cursor: pointer
 
 .who
     position: relative
@@ -166,6 +230,7 @@ h2
     background-color: #f5f5f5
     position: relative
     overflow: hidden
+    z-index: 2
     &:before
         content: " "
         width: 339px
@@ -175,6 +240,7 @@ h2
         transform: rotate(45deg)
         bottom: 17%
         left: -17%
+        z-index: -1
     &-icon-block
         grid-template-columns: 1fr 1fr 1fr
         grid-gap: 50px
@@ -194,20 +260,310 @@ h2
         overflow: hidden
         h4
             color: #6f6f6e
-            font-family: "Peace Sans"
+            font-family: 'Open Sans', sans-serif
             font-size: 30px
-            font-weight: 400
+            font-weight: 800
             line-height: 1
             margin-top: 30px
             margin-bottom: 25px
+.we-works
+    position: relative
+    overflow: hidden
+    background-color: #fff
+    z-index: -2
+    h2
+        margin-bottom: 70px
+    &-text
+        display: inline-block
+        max-width: 300px
+        p
+            margin-bottom: 46px
+        .btn
+            margin-left: 0
+    &-img
+        position: relative
+        left: 40%
+        bottom: 25%
+        display: grid
+        grid-template-columns: 1fr 1fr 1fr
+        &-one, &-two, &-three
+            position: absolute
+            display: grid
+            grid-gap: 0
+            width: 350px
+            height: 297px
+            grid-template-columns: 1fr 
+            align-items: end
+            padding-left: 87px
+            background-position: center
+            background-size: cover
+            bottom: 49%
+            transform: skewX(-25deg)
+            background-color: #000000
+            transition: all 1s ease
+            &:hover
+                background-blend-mode: hard-light
+                transition: all 1s ease
+                transform: translateX(-25%) skewX(-25deg)
+                p
+                    display: block
+                    transition: all 1s ease
+                    transform: skewX(25deg)
+            b
+                color: #ffffff
+                font-family: Lato
+                font-size: 40px
+                font-weight: 700
+                text-transform: uppercase
+                filter: drop-shadow(0 0 10px black)
+                transform: skewX(25deg)
+            p
+                max-width: 210px
+                color: #ffffff
+                font-family: "Open Sans"
+                font-size: 18px
+                filter: drop-shadow(0 0 10px black)
+                transform: skewX(25deg)
+                display: none
+                transition: all 1s ease
+        &-one
+            background-image: url(../img/lapiz.jpg)
+            left: 0
+            &:before
+                content: "1."
+                position: absolute
+                top: -7px
+                right: 25px
+                color: #ffffff
+                font-family: Lato
+                font-size: 58px
+                font-weight: 700
+                text-transform: uppercase
+                transform: skewX(25deg)
+        &-two
+            background-image: url(../img/photo1.jpg)
+            left: 390px
+            &:before
+                content: "2."
+                position: absolute
+                top: -7px
+                right: 25px
+                color: #ffffff
+                font-family: Lato
+                font-size: 58px
+                font-weight: 700
+                text-transform: uppercase
+                transform: skewX(25deg)
+        &-three
+            background-image: url(../img/photo2.jpg)
+            left: 780px
+            &:before
+                content: "3."
+                position: absolute
+                top: -7px
+                right: 25px
+                color: #ffffff
+                font-family: Lato
+                font-size: 58px
+                font-weight: 700
+                text-transform: uppercase
+                transform: skewX(25deg)
+    &:before
+        content: ""
+        position: absolute
+        width: 1183px
+        height: 1183px
+        right: -1213px
+        bottom: -55%
+        transform: rotate(45deg)
+        background-color: $accent-red
+        z-index: -1
+    &:after
+        content: ""
+        position: absolute
+        width: 583px
+        height: 583px
+        left: -587px
+        bottom: -294px
+        transform: rotate(45deg)
+        background-color: #171717
+        z-index: 11
+
+.team
+    background-color: #f5f5f5
+    position: relative
+    z-index: 8
+    &_photo
+        transform: rotate(-45deg)
+    .landing-block
+        padding-bottom: 20px
+
+// слайдер
+
+$color1: #19365f
+.slider
+    position: relative
+    overflow: hidden
+    text-align: center
+    padding: 80px
+    #slides
+        display: grid
+        grid-template-columns: 1fr 1fr 1fr
+        position: relative
+        padding: 0
+        margin: 0
+        li 
+            list-style: none
+            transition: all 1s ease
+            position: relative
+            opacity: 0.4
+            .name, .vac
+                transform: skewX(30deg)
+            span
+                transform: skewX(-30deg)
+                display: block
+            .name
+                position: relative
+                z-index: 1
+                background-color: #252525
+                color: #ffffff
+                font-family: "Open Sans"
+                font-size: 18px
+                font-weight: 700
+                padding: 11px
+                max-width: 273px
+                margin: 0 auto
+            .vac
+                display: none
+        li img
+            transition: all 1s ease
+            position: relative
+            box-shadow: -4px 12px 40px rgba(0, 1, 1, 0.22)
+            border: 18px solid #ffffff
+            max-width: 280px
+            z-index: 1
+        .showing
+            opacity: 1
+            z-index: 2
+            transform: scale(1.1)
+            .vac
+                display: block
+                background-color: $accent-red
+                max-width: 169px
+                margin: 0 auto
+                color: #ffffff
+                font-family: "Open Sans"
+                font-size: 14px
+                font-style: italic
+                font-weight: 400
+                padding: 5px
+                z-index: 3
+                position: relative
+                top: -6px
+
+.main-footer
+    background: url(../img/footer-img.png) no-repeat #171717
+    background-blend-mode: overlay
+    background-attachment: fixed
+    background-position: bottom
+    background-size: 100%
+    position: relative
+    h2
+        color: #9f9f9f
+        font-family: "Peace Sans"
+        font-size: 62px
+        font-weight: 400
+        text-align: center
+    .contact
+        grid-template-columns: 1fr 1fr 1fr
+        grid-gap: 150px
+        .fas, .far
+            float: left
+            display: block
+            width: 52px
+            font-size: 54px
+            color: #ffffff
+            margin-right: 28px
+            margin-top: 28px
+        .block
+            overflow: hidden
+        a, address
+            color: #ffffff
+            font-family: "Open Sans"
+            font-size: 16px
+            font-weight: 200
+        .title
+            color: #ffffff
+            font-family: "Open Sans"
+            font-size: 22px
+            margin-bottom: 20px
+            font-weight: 400
 
 
 
+.menu 
+    text-align: right
+    display: flex
+    &__icon 
+        display: none
+        width: 30px
+        height: 20px
+        position: relative
+        cursor: pointer
+        span 
+            display: block
+            position: absolute
+            height: 3px
+            width: 100%
+            background: #ffffff
+            border-radius: 9px
+            opacity: 1
+            left: 0
+            transform: rotate(0deg)
+            transition: .25s ease-in-out
+            &:nth-child(1) 
+                top: 10px
+            &:nth-child(2), &:nth-child(3) 
+                top: 20px
+            &:nth-child(4) 
+                top: 30px
+    &__links-item 
+        display: inline-block
+        color: #333333
+        font-family: Arial
+        font-size: 14px
+        line-height: 30px
+        padding: 0 10px
+        text-transform: uppercase
+        text-decoration: none
+        &:hover 
+            text-decoration: underline
 
 
+.menu.menu_state_open .menu__icon span:nth-child(1) 
+    top: 18px
+    width: 0%
+    left: 50%
 
-// В самом конце
-@import "media"
+
+.menu.menu_state_open .menu__icon span:nth-child(2) 
+    transform: rotate(45deg)
+
+
+.menu.menu_state_open  .menu__icon span:nth-child(3) 
+    transform: rotate(-45deg)
+
+
+.menu.menu_state_open  .menu__icon span:nth-child(4) 
+    top: 18px
+    width: 0%
+    left: 50%
+
+
+.menu.menu_state_open .menu__links 
+    display: block
+
 
 
     
+@import "media"
