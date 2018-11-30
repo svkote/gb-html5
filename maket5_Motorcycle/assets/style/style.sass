@@ -55,7 +55,7 @@ body
     position: relative
     &:after
         content: ""
-        background-color: #fff
+        background-color: #f0f0f0
         width: 3000px
         height: 2000px
         position: absolute
@@ -147,6 +147,46 @@ body
             height: 570px
             position: relative
             top: -230px
+main
+    background-color: #f0f0f0
+.tour-list
+    display: grid
+    grid-template-columns: 1fr 1fr 1fr
+    .tour-item-back
+        display: none
+    .tour-item-face
+        position: relative
+        &-text
+            position: absolute
+            bottom: 0
+            left: 0
+            color: #ffffff
+            font-family: bebas-neue, sans-serif
+            font-size: 56px
+            font-weight: 400
+            line-height: 0.5
+            p
+                font-size: 22px
+                font-weight: 400
+            span
+                font-size: 36px
+        &:before
+            content: ""
+            position: absolute
+            background-color: transparent
+            width: 120px
+            height: 120px
+            border: 120px solid transparent
+            border-bottom: 120px solid #cd0a2d
+            transform: rotate(-135deg)
+            bottom: -126px
+            left: -126px
+
+
+
+
+
+
 
 // В самом конце
 @import "media"
