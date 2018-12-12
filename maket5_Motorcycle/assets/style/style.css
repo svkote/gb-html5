@@ -2,6 +2,9 @@
 @font-face {
   font-family: "Peace sans";
   src: url("../fonts/PeaceSans.woff") format("woff"); }
+@font-face {
+  font-family: "BillyOhio";
+  src: url("../fonts/Billy Ohio.woff") format("woff"); }
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box; }
@@ -36,6 +39,224 @@ body {
 
 .visually-hidden {
   display: none; }
+
+.main-header {
+  background: url(../img/mountain.jpg) rgba(0, 0, 0, 0.71);
+  background-blend-mode: multiply;
+  background-size: cover;
+  max-height: 100vh;
+  overflow: hidden;
+  position: relative; }
+  .main-header:after {
+    content: "";
+    background-color: #f0f0f0;
+    width: 3000px;
+    height: 2000px;
+    position: absolute;
+    bottom: -191%;
+    left: 2%;
+    -webkit-transform: rotate(170deg);
+            transform: rotate(170deg);
+    z-index: 1; }
+  .main-header:before {
+    content: "";
+    background-color: #cd0a2d;
+    width: 700px;
+    height: 2000px;
+    position: absolute;
+    top: -110%;
+    right: -5%;
+    -webkit-transform: rotate(140deg);
+            transform: rotate(140deg);
+    z-index: 2; }
+  .main-header .container {
+    position: relative;
+    z-index: 2; }
+  .main-header .main-nav {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr; }
+    .main-header .main-nav .header-logo {
+      max-width: 192px;
+      max-height: 97px;
+      display: grid;
+      grid-template-columns: 1fr;
+      justify-items: center;
+      font-family: bebas-neue, sans-serif;
+      font-size: 34px;
+      font-weight: 400;
+      color: #ffffff;
+      padding: 0;
+      margin: 0;
+      line-height: 0.5;
+      margin-top: 10px; }
+      .main-header .main-nav .header-logo b span {
+        color: #cd0a2d; }
+      .main-header .main-nav .header-logo p {
+        padding: 0;
+        margin: 0;
+        text-shadow: 4px 2px 0 rgba(0, 0, 0, 0.2);
+        color: #ffffff;
+        font-family: Montserrat;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 27.05px;
+        text-transform: uppercase; }
+    .main-header .main-nav .header-menu ul, .main-header .main-nav .header-social ul {
+      float: right; }
+      .main-header .main-nav .header-menu ul li, .main-header .main-nav .header-social ul li {
+        float: left;
+        padding-top: 12px;
+        padding-right: 10px;
+        list-style: none;
+        margin-top: 20px; }
+        .main-header .main-nav .header-menu ul li a, .main-header .main-nav .header-social ul li a {
+          text-decoration: none;
+          text-shadow: 4px 2px 0 rgba(0, 0, 0, 0.2);
+          color: #ffffff;
+          font-family: Montserrat;
+          font-size: 14px;
+          font-weight: 400;
+          text-transform: uppercase; }
+        .main-header .main-nav .header-menu ul li i, .main-header .main-nav .header-social ul li i {
+          border: 3px solid #ffffff;
+          border-radius: 50px;
+          width: 47px;
+          height: 46px;
+          font-size: 24px;
+          text-align: center;
+          padding-top: 8px;
+          margin-top: -20px; }
+  .main-header .header-block {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px; }
+    .main-header .header-block h2 {
+      text-shadow: 4px 2px 0 rgba(0, 0, 0, 0.5);
+      color: #ffffff;
+      font-family: "Dancing Script", cursive;
+      font-size: 96px;
+      font-weight: 400;
+      line-height: 95.78px; }
+    .main-header .header-block img {
+      width: 940px;
+      height: 570px;
+      position: relative;
+      top: -230px; }
+
+main {
+  background-color: #f0f0f0; }
+
+section {
+  padding-top: 80px;
+  padding-bottom: 80px; }
+
+.tour-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr; }
+  .tour-list .tour-item-back {
+    display: none; }
+  .tour-list .tour-item-face {
+    position: relative; }
+    .tour-list .tour-item-face-text {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      color: #ffffff;
+      font-family: bebas-neue, sans-serif;
+      font-size: 56px;
+      font-weight: 400;
+      line-height: 0.5; }
+      .tour-list .tour-item-face-text p {
+        font-size: 22px;
+        font-weight: 400; }
+      .tour-list .tour-item-face-text span {
+        font-size: 36px; }
+    .tour-list .tour-item-face:before {
+      content: "";
+      position: absolute;
+      background-color: transparent;
+      width: 120px;
+      height: 120px;
+      border: 120px solid transparent;
+      border-bottom: 120px solid #cd0a2d;
+      -webkit-transform: rotate(-135deg);
+              transform: rotate(-135deg);
+      bottom: -126px;
+      left: -126px; }
+
+.about .container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  position: relative; }
+  .about .container .img-center {
+    position: absolute;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    left: 50%;
+    bottom: -40px;
+    z-index: 2; }
+.about-left {
+  background-color: #cd0a2d;
+  padding-left: 20px;
+  padding-right: 110px; }
+  .about-left h3 {
+    color: #fcfbfb;
+    font-family: bebas-neue, sans-serif;
+    font-size: 68px;
+    margin-bottom: 46px;
+    margin-top: 60px;
+    padding-left: 40px; }
+  .about-left b {
+    color: #ffffff;
+    font-family: "Helvetica LT Std - Bold Cond";
+    font-size: 26px;
+    font-weight: 400; }
+  .about-left p {
+    opacity: 0.44;
+    color: #ffffff;
+    font-family: Lato;
+    font-size: 18px;
+    font-weight: 500; }
+  .about-left li {
+    list-style: none; }
+.about-right {
+  background-color: #ffffff;
+  -webkit-transform: translateY(63px);
+          transform: translateY(63px);
+  z-index: 1;
+  padding-left: 110px;
+  padding-right: 20px; }
+  .about-right img {
+    float: left;
+    border: 6px solid #dcdcdc;
+    border-radius: 80px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    width: 126px;
+    height: 126px;
+    margin: 9px; }
+  .about-right li {
+    list-style: none; }
+  .about-right b, .about-right p, .about-right span {
+    overflow: hidden; }
+  .about-right .img-right {
+    float: right; }
+  .about-right b {
+    color: #5e5e5e;
+    font-family: bebas-neue, sans-serif;
+    font-size: 48px; }
+  .about-right span {
+    color: #979797;
+    font-family: bebas-neue, sans-serif;
+    font-size: 25px;
+    padding-left: 20px; }
+  .about-right p {
+    opacity: 0.66;
+    color: #040404;
+    font-family: Lato;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 26.67px; }
 
 /* Large Devices, Wide Screens */
 /* Medium Devices, Desktops */
