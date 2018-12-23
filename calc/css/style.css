@@ -17,7 +17,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: top;
-  box-shadow: inset 0 0 1em gold, inset 0 0 3em #ffffff;
+  box-shadow: inset 0 0 1em #ffd700, inset 0 0 3em #ffffff;
   border-radius: 320px 0;
   background-color: rgba(36, 35, 35, 0.582);
 }
