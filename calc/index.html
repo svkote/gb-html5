@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Bad+Script&amp;subset=cyrillic" rel="stylesheet">
+  <title>Calculator</title>
+</head>
+
+<body>
+  <div class="calc">
+    <div class="tabs">
+      <div class="tab-left active">Лэндинг</div>
+      <div class="tab-right">Многостраничник</div>
+    </div>
+    <div class="blocks" id="blocks-block">
+      <label for="counter-block" class="blocks-title">Количество блоков</label>
+      <input type="number" class="counter" id="counter-block">
+    </div>
+    <div class="blocks" id="pages-block">
+      <label for="counter-pages" class="blocks-title">Количество страниц</label>
+      <input type="number" class="counter" id="counter-pages">
+    </div>
+    <div class="blocks">
+         <label for="counter-hours" class="blocks-title">Сколько часов на проект</label> 
+      <input type="number" class="counter" id="counter-hours">
+    </div>
+    <div class="blocks">
+          <label for="counter-rate" class="blocks-title">Стоимость вашего часа</label>     
+      <input type="number" class="counter" id="counter-rate">
+    </div>
+    <div class="addiction">
+      <div class="addiction-title">Дополнительно</div>
+      <div class="addiction-block">
+        <input type="checkbox" class="checkbox" id="changes-check"> <label for="changes-check">Возможность редактировать текст на сайте</label> 
+      </div>
+      <div class="addiction-block">
+        <input type="checkbox" class="checkbox" id="changes-cms"> <label for="changes-cms">Установка на CMS</label> 
+      </div>
+    </div>
+    <div class="total">
+      Общая стоимость
+      <input type="text" class="total-count" id="total-value" value="5000" disabled>
+    </div>
+  </div>
+  <script src="js/script.js"></script>
+</body>
+
+</html>

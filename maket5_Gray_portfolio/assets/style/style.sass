@@ -1,0 +1,195 @@
+// Шрифты 
+@font-face
+    font-family: 'Whimsy TT'
+    src: url('../fonts/WhimsyTT.woff') format('woff')
+@font-face
+    font-family: 'Tahoma'
+    src: url('../fonts/Tahoma.woff') format('woff')
+@font-face
+    font-family: 'Tahoma Bold'
+    src: url('../fonts/Tahoma-Bold.woff') format('woff')
+
+// Библиотеки
+@import "../libs/normalize-css/normalize.css"  
+
+// Цвета
+$white: #ffffff
+$dark: #000000
+
+// Базовые стили
+*
+    box-sizing: border-box
+    &:before, &:after
+        box-sizing: border-box
+
+html, body
+    height: 100%
+body
+    font-size: 16px
+    min-width: 320px
+    position: relative
+    line-height: 1.75
+    font-family: raleway-grid, sans-serif
+    overflow-x: hidden
+    opacity: 1
+    color: #333333
+
+.img-responsive
+    display: block
+    max-width: 100%
+    height: auto
+.text-center
+    text-align: center
+    
+// Пользовательские стили
+@media (min-width: 992px)  
+    .navbar-expand-lg .navbar-nav 
+        -ms-flex-direction: row
+        flex-direction: row
+        justify-content: space-around
+        width: 100%
+body
+    background: url(../img/bck.png) no-repeat
+    background-attachment: fixed
+    background-position: center
+    background-size: cover
+
+.main-header
+    padding-top: 89px
+    padding-bottom: 14px
+    nav
+        position: relative
+        &:after
+            content: ""
+            background: url(../img/lineh.png) no-repeat
+            background-position: center
+            background-size: cover
+            position: absolute
+            width: 100%
+            height: 30px
+            bottom: 0
+            left: 50%
+            transform: translateX(-50%)
+
+.brand
+    text-shadow: 3px 4px 0 $white
+    color: $dark
+    font-family: "Whimsy TT"
+    font-size: 58px
+    font-weight: 400
+    text-transform: uppercase
+.main-menu
+    text-shadow: 3px 4px 0 $white
+    color: $dark
+    font-family: "Whimsy TT"
+    font-size: 18px
+    font-weight: 400
+    text-transform: uppercase
+.postal
+    background: url(../img/bck-2.png) no-repeat
+    background-size: 100%
+    min-height: 600px
+    &-in
+        padding: 85px
+        h2
+            color: $dark
+            font-family: "Whimsy TT"
+            font-size: 23px
+        p, b
+            color: #6e6e6e
+            font-family: Tahoma
+            font-size: 16px
+            line-height: 19px
+            padding-bottom: 15px
+        ul
+            list-style: none
+            padding: 0
+            .fl
+                float: left
+                margin-right: 20px
+            .text
+                overflow: hidden
+                a
+                    color: $dark
+    &:before
+        content: ""
+        background: url(../img/line.png) no-repeat
+        background-position: center
+        background-size: cover
+        position: absolute
+        width: 30px
+        height: 135%
+        bottom: 50%
+        left: -10%
+        transform: translatey(50%)
+
+main .container
+    position: relative
+    padding-bottom: 40px
+    &:after
+        content: ""
+        background: url(../img/lineh.png) no-repeat
+        background-position: center
+        background-size: cover
+        position: absolute
+        width: 100%
+        height: 30px
+        bottom: 0
+        left: 50%
+        transform: translateX(-50%)
+.cart
+    display: flex
+    justify-content: center
+    align-items: center
+    img
+        margin-bottom: 15px
+    p
+        text-align: center
+        text-shadow: 3px 4px 0 $white
+        color: $dark
+        font-family: "Whimsy TT"
+        font-size: 28px
+        font-weight: 400
+        text-transform: uppercase
+.main-footer
+    color: $dark
+    font-family: Tahoma
+    font-size: 10px
+    font-weight: 400 
+    position: relative
+    margin-bottom: 100px
+    a
+        color: $dark
+    &:after
+        content: ""
+        background: url(../img/man.png) no-repeat
+        background-position: center
+        position: absolute
+        width: 200px
+        height: 210px
+        bottom: -91px
+        right: 20%
+        transform: translateX(-50%)
+.second-footer
+    height: 225px   
+    background: url(../img/footer.png) no-repeat
+    background-attachment: fixed
+    background-position: center
+    background-size: cover 
+    position: relative
+    &:after
+        content: ""
+        background: url(../img/linefo.png) no-repeat
+        background-position: center
+        background-size: cover
+        position: absolute
+        width: 100%
+        height: 30px
+        top: -10px
+        left: 50%
+        transform: translateX(-50%)
+
+    
+
+// В самом конце
+@import "media"

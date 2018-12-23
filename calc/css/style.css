@@ -1,0 +1,144 @@
+* {
+  box-sizing: border-box;
+  outline: none;
+}
+body {
+  background-color: gray;
+  font-family: 'Bad Script', cursive;
+  background: url('../img/2.jpg') no-repeat;
+  background-size: cover;
+}
+.calc {
+  width: 1072px;
+  height: 650px;
+  border: 2px solid #efae02;
+  margin: 130px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: top;
+  box-shadow: inset 0 0 1em gold, inset 0 0 3em #ffffff;
+  border-radius: 320px 0;
+  background-color: rgba(36, 35, 35, 0.582);
+}
+.tabs {
+  width: 100%;
+  padding-top: 26px;
+  padding-bottom: 35px;
+  display: flex;
+  justify-content: center;
+}
+.tabs .tab-left,
+.tabs .tab-right {
+  width: 200px;
+  height: 70px;
+  border-radius: 0 15px 0 0;
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.47) 60%, rgba(255, 255, 255, 0.603) 100%);
+  margin-right: 5px;
+  color: #cecece;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 70px;
+  cursor: pointer;
+  text-align: center;
+}
+.tabs .tab-left {
+  border-radius: 15px 0 0 0;
+}
+.tabs .active {
+  background: linear-gradient(to top, #efae02 60%, #f1d9a3 100%);
+  color: #000;
+  position: relative;
+}
+.tabs .active:before {
+  content: '';
+  position: absolute;
+  width: 200px;
+  height: 1px;
+  background-color: #efae02;
+  left: 0;
+  bottom: -8px;
+}
+.counter {
+  width: 132px;
+  height: 60px;
+  border: 3px solid #e9ab03;
+  background-color: transparent;
+  text-align: center;
+  color: #efae02;
+  font-size: 40px;
+  cursor: default;
+  font-weight: 400;
+  font-style: italic;
+}
+.blocks {
+  width: 65%;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.blocks-title {
+  position: relative;
+  color: #ffffff;
+  font-size: 30px;
+  font-weight: 700;
+}
+.blocks-title:before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background-color: #efae02;
+  bottom: 0;
+  left: 0;
+}
+#pages-block {
+  display: none;
+}
+.addiction {
+  font-size: 30px;
+  font-weight: 700;
+  color: #efae02;
+}
+.addiction-title {
+  text-align: center;
+}
+.addiction-block {
+  text-align: left;
+}
+.addiction-block input[type="checkbox"] {
+  width: 24px;
+  height: 24px;
+  opacity: .5;
+}
+.total {
+  width: 60%;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 60px;
+  color: #ffffff;
+  font-size: 36px;
+  font-weight: 700;
+}
+.total-count {
+  width: 200px;
+  height: 60px;
+  background-color: transparent;
+  border: none;
+  color: #efae02;
+  text-align: right;
+  font-size: 46px;
+  font-weight: 400;
+  font-style: italic;
+}
+label {
+  cursor: pointer;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
