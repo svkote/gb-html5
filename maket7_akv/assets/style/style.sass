@@ -1,0 +1,45 @@
+// Шрифты 
+@font-face
+    font-family: 'Peace sans'
+    src: url('../fonts/PeaceSans.woff') format('woff')
+
+// Библиотеки
+@import "../libs/normalize-css/normalize.css"  
+
+// Цвета
+$accent-red: #bc2e3a
+$dark-gray: #494949
+$dark: #242424
+
+// Базовые стили
+*
+    box-sizing: border-box
+    &:before, &:after
+        box-sizing: border-box
+
+html, body
+    height: 100%
+body
+    font-size: 16px
+    min-width: 320px
+    position: relative
+    line-height: 1.75
+    font-family: raleway-grid, sans-serif
+    overflow-x: hidden
+    opacity: 1
+    color: #333333
+
+.img-responsive
+    display: block
+    max-width: 100%
+    height: auto
+.text-center
+    text-align: center
+    
+// Пользовательские стили
+
+
+
+
+// В самом конце
+@import "media"
